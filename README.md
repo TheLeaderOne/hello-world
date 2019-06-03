@@ -1,2 +1,2 @@
 # hello-world
-This will be on thr internet
+This will be on the internet
