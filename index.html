@@ -1,9 +1,13 @@
-<!DOCTYPE html>
-<html>
-<body>
+<input type=file></input>
+<br>
+<object id="preview" controls></object>
+<script>
+var fileInput = document.querySelector('input[type="file"]');
+var preview = document.getElementById('preview');
 
-<embed width="420" height="315"
-src="https://www.youtube.com/v/tgbNymZ7vqY">
-
-</body>
-</html>
+fileInput.addEventListener('change', function(e) {
+    var url = URL.createObjectURL(e.target.files[0]);  
+  //  preview.setAttribute('src', url);
+preview.src=url;
+});
+</script>
