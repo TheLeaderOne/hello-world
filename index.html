@@ -1,13 +1,3 @@
-<input type=file></input>
-<br>
-<video id="preview" controls></video>
-<script>
-var fileInput = document.querySelector('input[type="file"]');
-var preview = document.getElementById('preview');
-
-fileInput.addEventListener('change', function(e) {
-    var url = URL.createObjectURL(e.target.files[0]);  
-  //  preview.setAttribute('src', url);
-preview.src=url;
-});
-</script>
+<form action="README">
+<input type="submit" />
+</form>
