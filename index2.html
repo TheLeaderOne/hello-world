@@ -1,6 +1,5 @@
-<form id="hi">
+<img id="hi"></img>
 <input type="submit"/>
-</form>
 <script type="text/javascript">
 
 var url="https://mdn.github.io/fetch-examples/basic-fetch/flowers.jpg"
@@ -13,7 +12,7 @@ fetch(url)
 .then(function(myBlob) {
   var objectURL = URL.createObjectURL(myBlob);
   alert(String(objectURL));
-  blobform.action = objectURL;
+  blobform.src = objectURL;
 });
 
 </script>
