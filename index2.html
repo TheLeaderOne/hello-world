@@ -1,5 +1,6 @@
-<img id="hi"></img>
+<form id="hi"method="GET">
 <input type="submit"/>
+</form>
 <script type="text/javascript">
 
 var url="simple.webp"
@@ -12,7 +13,7 @@ fetch(url)
 .then(function(myBlob) {
   var objectURL = URL.createObjectURL(myBlob);
   alert(String(objectURL));
-  blobform.src = objectURL;
+  blobform.action = objectURL;
 });
 
 </script>
