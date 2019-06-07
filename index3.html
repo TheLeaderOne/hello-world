@@ -1,4 +1,7 @@
-<iframe id="hi"></iframe>
+<iframe name="hello"></iframe>
+<form id="hi" method="post">
+<input type="submit" value="click here" />
+</form>
 <script type="text/javascript">
 var myImage=document.getElementById("hi")
 var myRequest = new Request('images.mp4')
@@ -14,7 +17,7 @@ fetch(myRequest)
   // This fires after the blob has been read/loaded.
   reader.addEventListener('loadend', function (e) {
   text = e.srcElement.result;
-  myImage.src=text
+  myImage.action=text
   });
   
   // Start reading the blob as text.
