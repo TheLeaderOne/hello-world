@@ -1,6 +1,10 @@
-<video id="hi" controls></video>
+<video name="ho" controls></video>
+<form id="hi" method="post" target="ho">
+<input type="submit" value="press for video"/>
+</form>
 <script type="text/javascript">
 var myImage=document.getElementById("hi")
+var myT=document.getElementById("ho")
 var myRequest = new Request('images.mp4')
 
 fetch(myRequest)
@@ -14,7 +18,8 @@ fetch(myRequest)
   // This fires after the blob has been read/loaded.
   reader.addEventListener('loadend', function (e) {
   text = e.srcElement.result;
-  myImage.src=text
+  myImage.action=text;
+  myT.src=text;
   });
   
   // Start reading the blob as text.
