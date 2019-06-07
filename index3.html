@@ -1,4 +1,4 @@
-<video id="hi"></video>
+<a id="hi"></a>
 <script type="text/javascript">
 var myImage=document.getElementById("hi")
 var myRequest = new Request('images.mp4')
@@ -14,7 +14,7 @@ fetch(myRequest)
   // This fires after the blob has been read/loaded.
   reader.addEventListener('loadend', function (e) {
   text = e.srcElement.result;
-  myImage.src=text
+  myImage.href=text
   });
   
   // Start reading the blob as text.
