@@ -14,7 +14,7 @@ fetch(myRequest)
   reader.addEventListener('loadend', function (e) {
   text = e.srcElement.result;
   //myImage.src=text;
-  location.href=text;
+  location.assign(text);
   
   });
   
