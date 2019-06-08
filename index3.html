@@ -1,6 +1,6 @@
-<a id="a"></a>
+<a id="hi">@@@@</a>
 <script type="text/javascript">
-//var myImage=document.getElementById("hi");
+var myImage=document.getElementById("hi");
 var myRequest = new Request('images.mp4');
 
 fetch(myRequest)
@@ -14,22 +14,9 @@ fetch(myRequest)
   // This fires after the blob has been read/loaded.
   reader.addEventListener('loadend', function (e) {
   text = e.srcElement.result;
-  //myImage.action=text;
+  myImage.href=text;
   
-  var saveBlob = (function () {
-    var a = document.getElementById("a");
-    a.style = "display: none";
-    return function (blob, fileName) {
-        var url = window.URL.createObjectURL(blob);
-        a.href = url;
-        a.download = fileName;
-        a.click();
-        window.URL.revokeObjectURL(url);
-    };
-}());
-
-saveBlob(myBlob, 'test.txt');
-
+  
   });
   
   // Start reading the blob as text.
