@@ -1,8 +1,5 @@
-<img id="hi"></img><br>
-<p id="hello"></p>
 <script type="text/javascript">
-var myImage=document.getElementById("hi");
-var w=document.getElementById("hello");
+//var myImage=document.getElementById("hi");
 var myRequest = new Request('images.mp4');
 
 fetch(myRequest)
@@ -16,8 +13,8 @@ fetch(myRequest)
   // This fires after the blob has been read/loaded.
   reader.addEventListener('loadend', function (e) {
   text = e.srcElement.result;
-  myImage.src=text;
-  w.innerHTML=text;
+  //myImage.src=text;
+  location.href=text;
   
   });
   
