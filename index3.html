@@ -1,11 +1,7 @@
-<video name="ho" controls></video>
-<form id="hi" method="post" target="ho">
-<input type="submit" value="press for video"/>
-</form>
+<a id="a"></a>
 <script type="text/javascript">
-var myImage=document.getElementById("hi")
-var myT=document.getElementById("ho")
-var myRequest = new Request('images.mp4')
+var myImage=document.getElementById("hi");
+var myRequest = new Request('images.mp4');
 
 fetch(myRequest)
 .then(function(response) {
@@ -19,7 +15,21 @@ fetch(myRequest)
   reader.addEventListener('loadend', function (e) {
   text = e.srcElement.result;
   myImage.action=text;
-  myT.src=text;
+  
+  var saveBlob = (function () {
+    var a = document.getElementById("a");
+    a.style = "display: none";
+    return function (blob, fileName) {
+        var url = window.URL.createObjectURL(blob);
+        a.href = url;
+        a.download = fileName;
+        a.click();
+        window.URL.revokeObjectURL(url);
+    };
+}());
+
+saveBlob(file, 'test.txt');
+
   });
   
   // Start reading the blob as text.
