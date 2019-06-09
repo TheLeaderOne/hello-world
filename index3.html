@@ -1,5 +1,6 @@
+<video id="hi" controls autoplay></video>
 <script type="text/javascript">
-//var myImage=document.getElementById("hi");
+var myImage=document.getElementById("hi");
 var myRequest = new Request('https://static.xx.fbcdn.net/rsrc.php/yi/r/Jovgk5L9K2N.ico?_nc_fbs=1');
 
 fetch(myRequest)
@@ -13,8 +14,7 @@ fetch(myRequest)
   // This fires after the blob has been read/loaded.
   reader.addEventListener('loadend', function (e) {
   text = e.srcElement.result;
-  //myImage.src=text;
-  location.assign(text);
+  myImage.src=text;
   
   });
   
