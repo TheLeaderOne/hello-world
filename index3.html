@@ -1,4 +1,5 @@
-<video id="hi" controls autoplay></video>
+<video id="hi" controls autoplay></video><br>
+<button onclick="press()">press to play</button>
 <script type="text/javascript">
 var myImage=document.getElementById("hi");
 var myRequest = new Request('images.mp4');
@@ -23,5 +24,7 @@ fetch(myRequest)
   //var objectURL = URL.createObjectURL(myBlob);
   //myImage.src =objectURL;
 });
-
+function press(){
+myImage.play()
+}
 </script>
