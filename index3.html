@@ -1,4 +1,5 @@
 <video id="hi" controls autoplay></video><br>
+<p id="demo"></p><br>
 <button onclick="press()">press to play</button>
 <script type="text/javascript">
 var myImage=document.getElementById("hi");
@@ -16,6 +17,8 @@ fetch(myRequest)
   reader.addEventListener('loadend', function (e) {
   text = e.srcElement.result;
   myImage.src=text;
+  document.getElementById("demo").innerHTML = "Start: " + x.buffered.start(0)
++ " End: " + x.buffered.end(0);
   });
   
   // Start reading the blob as text.
