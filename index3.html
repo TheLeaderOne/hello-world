@@ -16,7 +16,7 @@ fetch(myRequest)
   reader.addEventListener('loadend', function (e) {
   text = e.srcElement.result;
   myImage.src=text;
-  myImage.poster='https://static.xx.fbcdn.net/rsrc.php/yi/r/Jovgk5L9K2N.ico?_nc_fbs=1';
+  alert(myImage.duration)
   });
   
   // Start reading the blob as text.
