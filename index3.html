@@ -16,7 +16,9 @@ fetch(myRequest)
   reader.addEventListener('loadend', function (e) {
   text = e.srcElement.result;
   myImage.src=text;
+  myImage.onload=function(){
   alert(myImage.duration)
+        };
   });
   
   // Start reading the blob as text.
