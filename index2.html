@@ -1,10 +1,8 @@
-<form id="hi"method="GET">
-<input type="submit"/>
-</form>
+<p id="hi"></p>
 <script type="text/javascript">
 
-var url="chorba.mp4"
-var blobform=document.getElementById("hi");
+var url="images.mp4"
+var p=document.getElementById("hi");
 
 fetch(url)
 .then(function(response) {
@@ -12,8 +10,8 @@ fetch(url)
 })
 .then(function(myBlob) {
   var objectURL = URL.createObjectURL(myBlob);
-  alert(String(objectURL));
-  blobform.action = objectURL;
+  
+  p.innerHTML = objectURL;
 });
 
 </script>
