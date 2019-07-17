@@ -1,6 +1,9 @@
+<img id="hi"></img>
 <script>
 localStorage.setItem("bob","data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==");
 
 alert(localStorage.getItem("bob"));
+
+document.getElementById("hi").src=localStorage.getItem("bob");
 
 </script>
