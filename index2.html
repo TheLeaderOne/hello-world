@@ -13,7 +13,7 @@ fetch(myRequest)
   // This fires after the blob has been read/loaded.
 reader.addEventListener('loadend', function (e) {
   text = e.srcElement.result;
-  loaclStorage.setItem("delta",text);
+  localStorage.setItem("delta",text);
   alert(localStorage.getItem("delta").length);
 myImage.src=localStorage.getItem("delta");
   });
