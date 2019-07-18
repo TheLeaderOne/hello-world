@@ -13,9 +13,11 @@ fetch(myRequest)
   // This fires after the blob has been read/loaded.
 reader.addEventListener('loadend', function (e) {
   text = e.srcElement.result;
-  localStorage.setItem("delta",text);
-  alert(localStorage.getItem("delta").length);
-myImage.src=localStorage.getItem("delta");
+  sessionStorage.setItem("delta",text);
+  sessionStorage.setItem("beta",text);
+  alert('delta:'+sessionStorage.getItem("delta").length);
+  alert('beta:'+sessionStorage.getItem("beta").length);
+myImage.src=sessionStorage.getItem("delta");
   });
   
   // Start reading the blob as text.
