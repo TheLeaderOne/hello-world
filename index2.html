@@ -14,6 +14,7 @@ fetch(myRequest)
 reader.addEventListener('loadend', function (e) {
   text = e.srcElement.result;
   sessionStorage.setItem("delta",text);
+  alert(sessionStorage.getItem("delta").length);
 myImage.src=sessionStorage.getItem("delta");
   });
   
