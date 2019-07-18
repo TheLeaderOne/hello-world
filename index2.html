@@ -1,17 +1,25 @@
-<p id="hi"></p>
+<video id="hi" controls></video>
 <script type="text/javascript">
+var myImage=document.getElementById("hi")
+var myRequest = new Request('images.mp4')
 
-var url="images.mp4"
-var p=document.getElementById("hi");
-
-fetch(url)
+fetch(myRequest)
 .then(function(response) {
   return response.blob();
 })
 .then(function(myBlob) {
-  var objectURL = URL.createObjectURL(myBlob);
+  const reader = new FileReader();
+  var text="";
+  // This fires after the blob has been read/loaded.
+reader.addEventListener('loadend', function (e) {
+  text = e.srcElement.result;
+  sessionStorage.setItem("delta",text);
+myImage.src=sessionStorage.getItem("delta");
+  });
   
-  p.innerHTML = objectURL;
+  // Start reading the blob as text.
+ reader.readAsDataURL(myBlob);
+
 });
 
 </script>
